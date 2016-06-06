@@ -1,0 +1,38 @@
+
+<div class="container" >
+	<div class="row">
+		<div class="col-md-4">
+			
+		</div>
+		<div class="col-md-4">
+			<div class="login" >
+			
+				<h2 class="text-center">Sign In</h2>
+				<form name="form">
+				
+					<div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+						<label for="username">Username</label>
+						<input type="text" name="username"  class="form-control" ng-model="user.username" required />
+						<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+					</div>
+					
+					<div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+						<label for="password">Password</label>
+						<input type="password" name="password"  class="form-control" ng-model="user.password" required />
+						<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+					</div>
+					
+					<div class="form-actions">
+						<button ng-disabled="form.$invalid" class="btn btn-primary" ng-click="login()">Login</button>
+
+					</div>
+				</form>
+			<p ng-bind="err"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			
+		</div>
+	</div>
+
+</div>
